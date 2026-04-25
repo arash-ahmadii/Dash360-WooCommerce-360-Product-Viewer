@@ -1,0 +1,85 @@
+.dash360-trigger-wrap {
+  margin-top: 12px;
+}
+
+.dash360-open-button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.dash360-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.dash360-modal-stage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dash360-close {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 1000001;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dash360-modal-loader {
+  position: fixed;
+  z-index: 1000000;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: dash360Spin 0.9s linear infinite;
+}
+
+.dash360-modal-message {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  z-index: 1000000;
+}
+
+body.dash360-modal-open {
+  overflow: hidden;
+}
+
+@keyframes dash360Spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .dash360-open-button.button {
+    width: 100%;
+  }
+}
